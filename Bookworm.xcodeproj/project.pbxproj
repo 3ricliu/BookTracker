@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		075541E725545AC700B6306D /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075541E625545AC700B6306D /* AddBookView.swift */; };
+		075541EB2554EF8100B6306D /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075541EA2554EF8100B6306D /* RatingView.swift */; };
 		07F2227A2553B5D200BF67E4 /* BookwormApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F222792553B5D200BF67E4 /* BookwormApp.swift */; };
 		07F2227C2553B5D200BF67E4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F2227B2553B5D200BF67E4 /* ContentView.swift */; };
 		07F2227E2553B5D200BF67E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07F2227D2553B5D200BF67E4 /* Assets.xcassets */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		075541E625545AC700B6306D /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
+		075541EA2554EF8100B6306D /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		07F222762553B5D200BF67E4 /* Bookworm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookworm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F222792553B5D200BF67E4 /* BookwormApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookwormApp.swift; sourceTree = "<group>"; };
 		07F2227B2553B5D200BF67E4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				07F222792553B5D200BF67E4 /* BookwormApp.swift */,
+				075541E625545AC700B6306D /* AddBookView.swift */,
+				075541EA2554EF8100B6306D /* RatingView.swift */,
 				07F2227B2553B5D200BF67E4 /* ContentView.swift */,
 				07F2227D2553B5D200BF67E4 /* Assets.xcassets */,
 				07F222822553B5D200BF67E4 /* Persistence.swift */,
@@ -147,7 +153,9 @@
 				07F222832553B5D200BF67E4 /* Persistence.swift in Sources */,
 				07F222862553B5D200BF67E4 /* Bookworm.xcdatamodeld in Sources */,
 				07F2227C2553B5D200BF67E4 /* ContentView.swift in Sources */,
+				075541EB2554EF8100B6306D /* RatingView.swift in Sources */,
 				07F2227A2553B5D200BF67E4 /* BookwormApp.swift in Sources */,
+				075541E725545AC700B6306D /* AddBookView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
