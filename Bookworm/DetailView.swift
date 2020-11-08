@@ -19,7 +19,7 @@ struct DetailView: View {
     GeometryReader { geometry in
       VStack {
         ZStack(alignment: .bottomTrailing) {
-          Image(self.book.genre ?? "Fantasy")
+          Image(self.book.genre ?? "Random")
             .frame(maxWidth: geometry.size.width)
           
           Text(self.book.genre?.uppercased() ?? "FANTASY")
@@ -59,9 +59,6 @@ struct DetailView: View {
   
   func deleteBook() {
     moc.delete(book)
-    
-//    try? self.moc.save()
-    
     presentationMode.wrappedValue.dismiss()
   }
 }
