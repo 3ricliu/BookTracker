@@ -14,7 +14,7 @@ struct AddBookView: View {
   @State private var title = ""
   @State private var author = ""
   @State private var rating = 3
-  @State private var genre = ""
+  @State private var genreType = 0
   @State private var review = ""
   
   let genres = ["Fantasy", "Horror", "Kids", "Mystery", "Poetry", "Romance", "Thriller"]
@@ -26,9 +26,9 @@ struct AddBookView: View {
           TextField("Name of Book", text: $title)
           TextField("Author's name", text: $author)
           
-          Picker("Genre", selection: $genre) {
-            ForEach(genres, id: \.self) {
-              Text($0)
+          Picker("Genre", selection: $genreType) {
+            ForEach(0..<genres.count) {number in
+              Text(genres[number])
             }
           }
         }
@@ -42,7 +42,7 @@ struct AddBookView: View {
             newBook.title = self.title
             newBook.author = self.author
             newBook.rating = Int16(self.rating)
-            newBook.genre = self.genre
+            newBook.genre = self.genres[self.genreType]
             newBook.review = self.review
             
             try? self.moc.save()
