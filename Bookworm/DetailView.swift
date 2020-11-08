@@ -36,6 +36,11 @@ struct DetailView: View {
           .font(.title)
           .foregroundColor(.secondary)
         
+        Text("Finished: \(getDate())")
+          .font(.caption)
+          .foregroundColor(.secondary)
+          
+        
         Text(self.book.review ?? "No Review")
           .padding()
         
@@ -45,7 +50,7 @@ struct DetailView: View {
       }
     }
     .navigationBarTitle(Text(book.title ?? "Unknown Book"), displayMode: .inline)
-    .alert(isPresented: $showingDeleteAlert) {
+    .alert(isPresented: $showingDeleteAlert) {:
       Alert(title: Text("Delete Book"), message: Text("Are you sure?"), primaryButton: .destructive(Text("Delete")) {
         self.deleteBook()
       }, secondaryButton: .cancel())
@@ -61,6 +66,12 @@ struct DetailView: View {
     moc.delete(book)
     presentationMode.wrappedValue.dismiss()
   }
+  
+  func getDate() -> String {
+    let formatter = DateFormatter()
+    formatter.dateStyle = .short
+    return formatter.string(from: self.book.date ?? Date())
+  }
 }
 
 
@@ -74,6 +85,7 @@ struct DetailView_Previews: PreviewProvider {
     book.genre = "Fantasy"
     book.rating = 4
     book.review = "This was a great book!"
+    book.date = Date()
     return NavigationView {
       DetailView(book: book)
     }
